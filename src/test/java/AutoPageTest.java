@@ -14,7 +14,7 @@ public class AutoPageTest {
     @Test
     public void test1(){
 
-        System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\Va185060\\\\Desktop\\\\sag\\\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\SAGAR\\dwhelper\\Downloads\\chrome\\chromedriver.exe");
         WebDriver driver; driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         AutoPraticeSite gp=new  AutoPraticeSite(driver);
