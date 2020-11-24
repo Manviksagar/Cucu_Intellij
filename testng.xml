@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/Va185060/IdeaProjects/Sele_Testing/src/test/java/AutoPageTest.java">
-        <classes/></test></suite>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="false"
+          name="Test">
+        <classes>
+            <class name="com.sag.test.AutoPageTest" />
+        </classes>
+    </test>
+</suite>

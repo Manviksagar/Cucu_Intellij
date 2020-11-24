@@ -25,4 +25,4 @@ Feature: Testing login feature
     Examples:
       | username	              | Password	    |
       | blog.cucumber@gmail.com | Cucumber@blog |
-      | allu.cucumber@gmail.com | Cucumber@blog |
+      | blog.cucumber@gmail.com | Cucumber@blog |
