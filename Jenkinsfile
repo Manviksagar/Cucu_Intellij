@@ -17,10 +17,6 @@ pipeline {
             }
         }
 
-        post {
-                always {
-                    cucumber '/target/cucumber-reports/cucumber.json'
-                }
-              }
+
     }
 }
