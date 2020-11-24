@@ -16,5 +16,10 @@ pipeline {
                 echo 'deploy'
             }
         }
+
+        post {
+                always {
+                    cucumber '**/cucumber.json'
+                }
     }
 }
