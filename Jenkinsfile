@@ -21,5 +21,6 @@ pipeline {
                 always {
                     cucumber '/target/cucumber-reports/cucumber.json'
                 }
+              }
     }
 }
