@@ -1,6 +1,7 @@
 package com.sag.base;
 
 import com.sag.page.GooglePage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,7 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\Va185060\\\\Desktop\\\\sag\\\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\Va185060\\\\Desktop\\\\sag\\\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver; driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
        GooglePage gp=new  GooglePage(driver);

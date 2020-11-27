@@ -2,11 +2,17 @@ package com.sag.page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class AutoPraticeSite {
 
+    private final WebDriverWait wait;
     public WebDriver driver;
 
     @FindBy(linkText="Sign in")
@@ -20,13 +26,15 @@ public class AutoPraticeSite {
 
     public AutoPraticeSite(WebDriver driver) {
         this.driver=driver;
+        this.wait = new WebDriverWait(driver, 30);
         PageFactory.initElements(driver,this);
 
     }
 
-    public void pageNavigate(String url){
+    public void pageNavigate(String url) throws InterruptedException {
 
-        driver.get(url);
+        this.driver.get(url);
+        this.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         this.signin.click();
 
     }

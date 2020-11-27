@@ -17,11 +17,12 @@ ADD target/libs							libs
 # ADD suite files
 ADD testng.xml				testng.xml
 
-# ADD health check script
 
+# ADD health check script
+ADD healthcheck.sh                      healthcheck.sh
 
 # BROWSER
 # HUB_HOST
 # MODULE
 
-ENTRYPOINT java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* org.testng.TestNG testng.xml
+ENTRYPOINT sh healthcheck.sh
